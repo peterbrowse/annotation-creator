@@ -30,10 +30,12 @@ function build_button($video_number, $time_point, $start_code, $end_code) {
 	return $button;
 }
 
-function build_label($video_number) {
+function build_label($video_number, $start_code, $end_code, $button_selected) {
+	
 	global $annotation_start_id,
-	$start_code,
-	$end_code,
+	$label_font_size,
+	$label_selected_colour,
+	$label_colour,
 	${'label_' . $video_number},
 	${'h_' . $video_number},
 	${'w_' . $video_number},
@@ -48,7 +50,11 @@ function build_label($video_number) {
 	$label .= '<rectRegion d="0" h="'. ${'h_' . $video_number} .'" t="' . timecode_generator($end_code) . '" w="'. ${'w_' . $video_number} .'" x="'. ${'x_' . $video_number} .'" y="'. ${'y_' . $video_number} .'"/>';
 	$label .= '</movingRegion>';
 	$label .= '</segment>';
-	$label .= '<appearance bgAlpha="0.25" bgColor="0" borderAlpha="0.10000000149" effects="" fgColor="16777215" fontWeight="bold" textSize="4"/>';
+	if($button_selected) {
+		$label .= '<appearance bgAlpha="0.25" bgColor="0" borderAlpha="1" effects="" fgColor="'. $label_selected_colour .'" fontWeight="" textSize="'. $label_font_size .'"/>';
+	} else {
+		$label .= '<appearance bgAlpha="0.25" bgColor="0" borderAlpha="1" effects="" fgColor="'. $label_colour .'" fontWeight="" textSize="'. $label_font_size .'"/>';
+	}
 	$label .= '</annotation>';
 	
 	return $label;
