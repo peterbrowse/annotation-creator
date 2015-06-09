@@ -7,19 +7,20 @@
 	//Settings
 	
 	$num_count_start = 1;
-	$num_videos = 3;
+	$num_videos = 12;
 	$single_video_length = 30;
 	$total_video_length = $single_video_length * $num_videos;
 	
 	$start_code = 0;
 	$end_code = 360;
 	
-	$annotation_increment = 2;
+	$annotation_increment = 1;
+	$annotation_updates = $single_video_length / $annotation_increment;
 	
 	$annotation_start_id = 3212405871;
 	
-	$title_text_displayed = false;
-	$button_text_displayed = false;
+	$title_text_displayed = true;
+	$button_text_displayed = true;
 	
 	//Dimensions
 	$padding_gap = 1.42857143;
