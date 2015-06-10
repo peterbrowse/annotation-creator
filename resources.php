@@ -59,7 +59,7 @@ $x_6 = ($padding_gap * 6) + ($box_width * 5);
 $y_6 = $top_row_y;
 
 //Button Seven
-$label_7 = 'Japense';
+$label_7 = 'Japanese';
 $h_7 = $box_height;
 $w_7 = $box_width;
 $x_7 = $padding_gap;
