@@ -2,7 +2,7 @@
 
 	//YouTube Variables
 	
-	$video_id = '29AM1Cb0NZo';
+	$video_id = 'Yr6tdh4ndSk';
 
 	//Settings
 	
@@ -17,7 +17,7 @@
 	$annotation_increment = 1;
 	$annotation_updates = $single_video_length / $annotation_increment;
 	
-	$annotation_start_id = 3212405871;
+	$annotation_start_id = 237651319;
 	
 	$title_text_displayed = true;
 	$button_text_displayed = true;
